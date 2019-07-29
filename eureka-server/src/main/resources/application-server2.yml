@@ -1,0 +1,8 @@
+server:
+  port: 7011
+eureka:
+  instance:
+    hostname: eureka-server2
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:7010/eureka

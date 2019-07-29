@@ -1,0 +1,17 @@
+spring:
+  application:
+    #服务名
+    name: hello-service
+eureka:
+  client:
+    service-url:
+      ##指定服务注册中心的地址
+      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://eureka-server1:7010/eureka,http://eureka-server2:7011/eureka
+  instance:
+    #服务续约的间隔时间
+    lease-renewal-interval-in-seconds: 30
+    #服务失效的时间
+    lease-expiration-duration-in-seconds: 90
+server:
+  port: 7002
