@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: feign-consumer
+
+server:
+  port: 7005
+
+eureka:
+  client:
+    service-url:
+      ##指定服务注册中心的地址
+      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://eureka-server1:7010/eureka,http://eureka-server2:7011/eureka
