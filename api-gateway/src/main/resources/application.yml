@@ -6,9 +6,10 @@ server:
 
 zuul:
   routes:
-    api-a-url:
-      path: /api-a-url/**
-      serviceId: hello-service
+    #api-a-url:
+      #path: /api-a-url/**
+      #serviceId: hello-service
+    hello-service: /hello-service/**
     api-b-url:
       path: /api-b-url/**
       serviceId: feign-consumer
