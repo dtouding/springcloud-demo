@@ -4,15 +4,15 @@ spring:
 server:
   port: 7006
 
-zuul:
-  routes:
+#zuul:
+  #routes:
     #api-a-url:
       #path: /api-a-url/**
       #serviceId: hello-service
-    hello-service: /hello-service/**
-    api-b-url:
-      path: /api-b-url/**
-      serviceId: feign-consumer
+    #hello-service: /hello-service/**
+    #api-b-url:
+      #path: /api-b-url/**
+      #serviceId: feign-consumer
 
 eureka:
   client:
