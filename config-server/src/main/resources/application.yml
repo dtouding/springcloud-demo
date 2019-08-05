@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dtouding/springcloud-demo.git #git仓库地址
+          search-paths: config-repo #git仓下的相对路径，可以配置多个
+          username: dtouding
+          password: 123456
+server:
+  port: 7007
+
