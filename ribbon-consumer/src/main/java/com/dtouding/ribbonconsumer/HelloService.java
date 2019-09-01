@@ -13,6 +13,12 @@ public class HelloService {
 
     @HystrixCommand(fallbackMethod = "helloFallback")
     public String hello() {
+        System.out.println("Hello.....");
+        try {
+            Thread.sleep(100000);
+        } catch (InterruptedException e) {
+
+        }
         return restTemplate.getForEntity("http://hello-service/hello", String.class).getBody();
     }
 

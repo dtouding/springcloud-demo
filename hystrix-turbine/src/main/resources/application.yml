@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: hystrix-turbine
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      ##指定服务注册中心的地址
+      defaultZone: http://localhost:7001/eureka
+turbine:
+  aggregator:
+    cluster-config: default
+  ##配置了需要监控的服务名
+  app-config: ribbon-consumer
+  ##指定了集群名称
+  cluster-name-expression: new String("default")
+  ##让同一主机上的服务通过主机名和端口号的组合来区分，默认情况下会以host来区分不同的服务
+  combine-host-port: true
